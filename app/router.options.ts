@@ -6,12 +6,12 @@ export default {
     {
       name: 'index',
       path: '/',
-      component: () => import('~/sections/landing/pages/index.vue'),
+      component: () => import('~/modules/landing/pages/index.vue'),
     },
     {
       name: 'advice-generator',
       path: '/advice-generator',
-      component: () => import('~/sections/advice-generator/pages/index.vue'),
+      component: () => import('~/modules/advice-generator/pages/index.vue'),
     },
   ],
 } satisfies RouterConfig
