@@ -10,6 +10,7 @@ const challenges: Challenge[] = [
     name: 'Advice Generator',
     slug: 'advice-generator',
     intro: 'Using the Advice Slip API to generate random quotes of advice.',
+    challenge_url: 'https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db',
     body: '',
   },
 ]
