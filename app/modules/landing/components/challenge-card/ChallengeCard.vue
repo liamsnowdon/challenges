@@ -15,6 +15,8 @@ defineProps({
     :to="{ name: challenge.slug }"
     bg="gray-900"
     rounded="2xl"
+    ring="1px transparent hover:sky-500"
+    transition="box-shadow duration-250"
     overflow="hidden"
     pos="relative"
   >

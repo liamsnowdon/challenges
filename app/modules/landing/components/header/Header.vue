@@ -20,7 +20,7 @@ defineProps({
 </script>
 
 <template>
-  <Wrapper border="b neutral-800">
+  <Wrapper border="b gray-900">
     <WrapperContent>
       <div
         flex="~ col"
