@@ -46,7 +46,7 @@ export default defineConfig({
 
   preflights: [{
     getCSS: () => `
-      html, body, #__nuxt {
+      html, body {
         height: 100%;
       }
 

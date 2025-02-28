@@ -20,7 +20,7 @@ const { data: jobs } = await useFetch('/api/devjobs/jobs')
 </script>
 
 <template>
-  <div h="full" font="[Kumbh_Sans,sans-serif]" bg="devjobs-secondary-lightgrey dark:devjobs-primary-midnight">
+  <div font="[Kumbh_Sans,sans-serif]" bg="devjobs-secondary-lightgrey dark:devjobs-primary-midnight">
     <Header />
 
     <Wrapper>

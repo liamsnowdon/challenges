@@ -27,7 +27,7 @@ const challenges: Challenge[] = [
 </script>
 
 <template>
-  <div h="full" bg="gray-950" text="gray-400">
+  <div min-h="screen" bg="gray-950" text="gray-400">
     <Header title="Coding Challenges" description="This is a library of random coding challenges I've completed." />
 
     <Wrapper>

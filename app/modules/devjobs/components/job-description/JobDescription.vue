@@ -69,12 +69,18 @@ defineProps({
 
     <ol
       text="devjobs-secondary-darkgrey dark:devjobs-secondary-gray marker:devjobs-primary-violet"
-      p="l-3.5"
+      p="l-2"
       font="leading-6.5"
       list="decimal"
       m="b-10"
+      class="[counter-reset:list-number]"
     >
-      <li v-for="item in job.requirements.items" :key="item" p="l-6">
+      <li
+        v-for="item in job.requirements.items"
+        :key="item"
+        p="l-7.5"
+        class="[counter-increment:list-number] marker:[content:counter(list-number)] marker:font-bold"
+      >
         {{ item }}
       </li>
     </ol>
