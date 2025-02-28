@@ -40,7 +40,7 @@ const { data: job } = await useFetch(`/api/devjobs/jobs/${id}`)
         <WrapperContent size="small">
           <div flex="~" items="center" justify="between">
             <div class="hidden md:flex" flex="col md:1" space="y-2">
-              <h2 text="xl devjobs-primary-darkblue" font="bold">
+              <h2 text="xl devjobs-primary-darkblue dark:devjobs-secondary-white" font="bold">
                 {{ job.position }}
               </h2>
               <span text="devjobs-secondary-darkgrey">

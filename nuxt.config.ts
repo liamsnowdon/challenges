@@ -5,7 +5,10 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@unocss/nuxt',
     '@nuxtjs/seo',
+    '@nuxtjs/color-mode',
   ],
+
+  ssr: false,
 
   components: {
     dirs: [],
@@ -26,6 +29,10 @@ export default defineNuxtConfig({
     name: 'Liam Snowdon Coding Challenges',
     description: 'Random coding challenges showcasing my knowledge',
     defaultLocale: 'en',
+  },
+
+  colorMode: {
+    classSuffix: '',
   },
 
   future: {

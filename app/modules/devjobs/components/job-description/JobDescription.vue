@@ -13,7 +13,7 @@ defineProps({
 </script>
 
 <template>
-  <div bg="devjobs-secondary-white" p="x-6 y-10 md:12">
+  <div bg="devjobs-secondary-white dark:devjobs-primary-darkblue" p="x-6 y-10 md:12">
     <div flex="~ col md:row" items="md:center" space="y-12.5 md:y-0 md:x-7.5" m="b-8 md:b-10">
       <div flex="1">
         <DotSpacer text="devjobs-secondary-darkgrey">
@@ -39,7 +39,7 @@ defineProps({
       {{ job.description }}
     </p>
 
-    <h2 text="xl devjobs-primary-darkblue" font="bold" m="b-7">
+    <h2 text="xl devjobs-primary-darkblue dark:devjobs-secondary-white" font="bold" m="b-7">
       Requirements
     </h2>
 
@@ -59,7 +59,7 @@ defineProps({
       </li>
     </ul>
 
-    <h2 text="xl devjobs-primary-darkblue" font="bold" m="b-7">
+    <h2 text="xl devjobs-primary-darkblue dark:devjobs-secondary-white" font="bold" m="b-7">
       What You Will Do
     </h2>
 

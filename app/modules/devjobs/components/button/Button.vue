@@ -28,8 +28,8 @@ const variantClasses = computed(() => {
       'focus:ring-devjobs-primary-lightviolet focus:ring-offset-devjobs-primary-midnight',
     ],
     secondary: [
-      'text-devjobs-primary-violet',
-      'bg-devjobs-primary-violet/10 hover:bg-devjobs-primary-violet/30 dark:bg-devjobs-secondary-white/10 dark:bg-devjobs-secondary-white/35',
+      'text-devjobs-primary-violet dark:text-devjobs-secondary-white',
+      'bg-devjobs-primary-violet/10 hover:bg-devjobs-primary-violet/30 dark:bg-devjobs-secondary-white/10 dark:hover:bg-devjobs-secondary-white/35',
       'focus:ring-devjobs-primary-violet/30 dark:focus:ring-devjobs-secondary-white/35 focus:ring-offset-devjobs-secondary-white',
     ],
   }[props.variant]

@@ -13,7 +13,7 @@ defineProps({
 
 <template>
   <div
-    bg="devjobs-secondary-white"
+    bg="devjobs-secondary-white dark:devjobs-primary-darkblue"
     flex="~"
     justify="center"
     border="rounded-md"
