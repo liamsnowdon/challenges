@@ -10,7 +10,8 @@
     flex="~"
     items="start"
     justify="between"
-    bg="[url(/images/challenges/devjobs/mobile/bg-pattern-header.svg)] md:[url(/images/challenges/devjobs/tablet/bg-pattern-header.svg)] lg:[url(/images/challenges/devjobs/desktop/bg-pattern-header.svg)] center cover no-repeat"
+    bg="center cover no-repeat"
+    class="bg-[url(/images/challenges/devjobs/mobile/bg-pattern-header.svg)] md:bg-[url(/images/challenges/devjobs/tablet/bg-pattern-header.svg)] lg:bg-[url(/images/challenges/devjobs/desktop/bg-pattern-header.svg)]"
   >
     <NuxtLink :to="{ name: 'devjobs' }">
       <img src="/images/challenges/devjobs/desktop/logo.svg" alt="devjobs logo" width="115" height="32">
