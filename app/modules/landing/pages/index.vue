@@ -16,11 +16,18 @@ const challenges: Challenge[] = [
     challenge_url: 'https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db',
     body: '',
   },
+  {
+    name: 'Devjobs',
+    slug: 'devjobs',
+    intro: 'A jobs board that lists developer jobs.',
+    challenge_url: 'https://www.frontendmentor.io/challenges/devjobs-web-app-HuvC_LP4l',
+    body: '',
+  },
 ]
 </script>
 
 <template>
-  <div h="full" bg="gray-950" text="gray-400">
+  <div min-h="screen" bg="gray-950" text="gray-400">
     <Header title="Coding Challenges" description="This is a library of random coding challenges I've completed." />
 
     <Wrapper>

@@ -14,6 +14,7 @@ export default defineConfig({
 
   theme: {
     colors: {
+      // Advice Generator
       advice: {
         primary: {
           cyan: 'hsl(193, 38%, 86%)',
@@ -25,12 +26,27 @@ export default defineConfig({
           darkblue: 'hsl(218, 23%, 16%)',
         },
       },
+      // Devjobs
+      devjobs: {
+        primary: {
+          violet: '#5964e0',
+          lightviolet: '#939bf4',
+          darkblue: '#19202d',
+          midnight: '#121721',
+        },
+        secondary: {
+          white: '#ffffff',
+          lightgrey: '#f4f6f8',
+          gray: '#9daec2',
+          darkgrey: '#6e8098',
+        },
+      },
     },
   },
 
   preflights: [{
     getCSS: () => `
-      html, body, #__nuxt {
+      html, body {
         height: 100%;
       }
 
