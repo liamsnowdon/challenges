@@ -48,7 +48,7 @@ function onPaginationClick () {
     <Wrapper>
       <WrapperContent>
         <div space="y-8 md:y-14" p="b-15.5 lg:b-26">
-          <div v-if="data" grid="~ cols-1 md:cols-2 lg:cols-3 gap-y-12.5 md:gap-y-16.25 md:gap-x-3 lg:gap-x-7.5">
+          <div grid="~ cols-1 md:cols-2 lg:cols-3 gap-y-12.5 md:gap-y-16.25 md:gap-x-3 lg:gap-x-7.5">
             <JobCard v-for="job in jobs" :key="job.id" :job="job" />
           </div>
 
