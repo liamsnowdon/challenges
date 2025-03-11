@@ -1,10 +1,7 @@
-import { defineOrganization } from 'nuxt-schema-org/schema'
-
 export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
     '@unocss/nuxt',
-    '@nuxtjs/seo',
   ],
 
   components: {
@@ -21,13 +18,6 @@ export default defineNuxtConfig({
     '@unocss/reset/tailwind.css',
   ],
 
-  site: {
-    url: 'https://challenges.liamsnowdon.uk',
-    name: 'Liam Snowdon Coding Challenges',
-    description: 'Random coding challenges showcasing my knowledge',
-    defaultLocale: 'en',
-  },
-
   future: {
     compatibilityVersion: 4,
   },
@@ -43,12 +33,5 @@ export default defineNuxtConfig({
     config: {
       stylistic: true,
     },
-  },
-
-  schemaOrg: {
-    identity: defineOrganization({
-      name: 'Liam Snowdon Coding Challenges',
-      url: 'https://challenges.liamsnowdon.uk',
-    }),
   },
 })

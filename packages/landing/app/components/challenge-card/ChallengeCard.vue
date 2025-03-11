@@ -12,7 +12,8 @@ defineProps({
 
 <template>
   <NuxtLink
-    :to="{ name: challenge.slug }"
+    :to="`https://ls-challenges-${challenge.slug}.netlify.app`"
+    target="_blank"
     bg="gray-900"
     rounded="2xl"
     ring="1px transparent hover:sky-500"
