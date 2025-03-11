@@ -1,12 +1,9 @@
 <script lang="ts" setup>
-import { useFavicon } from '@vueuse/core'
 import Header from '../components/header/Header.vue'
 import Wrapper from '../components/wrapper/Wrapper.vue'
 import WrapperContent from '../components/wrapper/WrapperContent.vue'
 import ChallengeCard from '../components/challenge-card/ChallengeCard.vue'
 import type { Challenge } from '../types'
-
-useFavicon().value = 'favicon.ico'
 
 const challenges: Challenge[] = [
   {
@@ -20,7 +17,7 @@ const challenges: Challenge[] = [
 </script>
 
 <template>
-  <div h="full" bg="gray-950" text="gray-400">
+  <div>
     <Header title="Coding Challenges" description="This is a library of random coding challenges I've completed." />
 
     <Wrapper>

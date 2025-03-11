@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { useFavicon } from '@vueuse/core'
 import AdviceCard from '../components/advice-card/AdviceCard.vue'
 import type { SlipEntity } from '../types'
 import { useFetch, useHead } from '#imports'
@@ -11,8 +10,6 @@ useHead({
     { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap' },
   ],
 })
-
-useFavicon().value = 'advice-generator.png'
 
 const { data: slip, refresh } = await useFetch<SlipEntity>('https://api.adviceslip.com/advice', {
   onResponse: (value) => {

@@ -10,6 +10,7 @@ This is a solution to the [Advice generator app challenge on Frontend Mentor](ht
   - [Links](#links)
 - [Built with](#built-with)
 - [Author](#author)
+- [Running locally](#running-locally)
 
 ## Overview
 
@@ -39,3 +40,15 @@ Users should be able to:
 
 - Website - [Liam Snowdon](https://liamsnowdon.uk)
 - Frontend Mentor - [@liamsnowdon](https://www.frontendmentor.io/profile/liamsnowdon)
+
+## Running locally
+
+```bash
+npm install
+```
+
+Start the development server on `http://localhost:3000`:
+
+```bash
+npm run dev
+```
