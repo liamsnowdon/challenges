@@ -28,14 +28,14 @@ defineEmits<{
 const variantClasses = computed(() => {
   return {
     primary: [
-      'text-devjobs-secondary-white',
-      'bg-devjobs-primary-violet hover:bg-devjobs-primary-lightviolet',
-      'focus:ring-devjobs-primary-lightviolet focus:ring-offset-devjobs-primary-midnight',
+      'text-secondary-white',
+      'bg-primary-violet hover:bg-primary-lightviolet',
+      'focus:ring-primary-lightviolet focus:ring-offset-primary-midnight',
     ],
     secondary: [
-      'text-devjobs-primary-violet dark:text-devjobs-secondary-white',
-      'bg-devjobs-primary-violet/10 hover:bg-devjobs-primary-violet/30 dark:bg-devjobs-secondary-white/10 dark:hover:bg-devjobs-secondary-white/35',
-      'focus:ring-devjobs-primary-violet/30 dark:focus:ring-devjobs-secondary-white/35 focus:ring-offset-devjobs-secondary-white',
+      'text-primary-violet dark:text-secondary-white',
+      'bg-primary-violet/10 hover:bg-primary-violet/30 dark:bg-secondary-white/10 dark:hover:bg-secondary-white/35',
+      'focus:ring-primary-violet/30 dark:focus:ring-secondary-white/35 focus:ring-offset-secondary-white',
     ],
   }[props.variant]
 })

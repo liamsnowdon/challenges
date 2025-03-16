@@ -1,5 +1,5 @@
 <template>
-  <div font="[Kumbh_Sans,sans-serif]" bg="devjobs-secondary-lightgrey dark:devjobs-primary-midnight">
+  <div font="[Kumbh_Sans,sans-serif]">
     <NuxtRouteAnnouncer />
 
     <NuxtPage />

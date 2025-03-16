@@ -14,7 +14,7 @@ const { data: job } = await useFetch(`/api/jobs/${id}`)
 </script>
 
 <template>
-  <div font="[Kumbh_Sans,sans-serif]" bg="devjobs-secondary-lightgrey dark:devjobs-primary-midnight">
+  <div>
     <Header />
 
     <template v-if="job">
@@ -25,14 +25,14 @@ const { data: job } = await useFetch(`/api/jobs/${id}`)
         </WrapperContent>
       </div>
 
-      <div p="6 md:x-10" bg="devjobs-secondary-white dark:devjobs-primary-darkblue">
+      <div p="6 md:x-10" bg="secondary-white dark:primary-darkblue">
         <WrapperContent size="small">
           <div flex="~" items="center" justify="between">
             <div class="hidden md:flex" flex="col md:1" space="y-2">
-              <h2 text="xl devjobs-primary-darkblue dark:devjobs-secondary-white" font="bold">
+              <h2 text="xl primary-darkblue dark:secondary-white" font="bold">
                 {{ job.position }}
               </h2>
-              <span text="devjobs-secondary-darkgrey">
+              <span text="secondary-darkgrey">
                 {{ job.company }}
               </span>
             </div>

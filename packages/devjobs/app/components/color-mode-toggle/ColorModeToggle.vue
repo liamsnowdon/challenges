@@ -32,9 +32,9 @@ function onClick () {
       cursor="pointer"
       transition="colors ease-in-out duration-200"
       outline="focus:none"
-      bg="devjobs-secondary-white"
+      bg="secondary-white"
       :class="{
-        'focus:ring-1 focus:ring-devjobs-secondary-white ring-offset-1 ring-offset-devjobs-primary-violet': true,
+        'focus:ring-1 focus:ring-secondary-white ring-offset-1 ring-offset-primary-violet': true,
       }"
       @click="onClick"
     >
@@ -49,7 +49,7 @@ function onClick () {
         transform="~"
         ring="0"
         transition="~ ease-in-out duration-200"
-        bg="devjobs-primary-violet"
+        bg="primary-violet"
         :class="{
           'translate-x-27px': value,
           'translate-x-1px': !value,

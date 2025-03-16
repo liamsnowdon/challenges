@@ -19,7 +19,7 @@ defineProps({
         id: job.id,
       },
     }"
-    bg="devjobs-secondary-white dark:devjobs-primary-darkblue"
+    bg="secondary-white dark:primary-darkblue"
     p="x-8 b-8 t-12.25"
     flex="~ col"
     rounded="md"
@@ -41,17 +41,17 @@ defineProps({
       <img :src="job.logo" :alt="`${job.company} logo`">
     </div>
 
-    <DotSpacer text="devjobs-secondary-darkgrey" m="b-4">
+    <DotSpacer text="secondary-darkgrey" m="b-4">
       <span>{{ job.postedAt }}</span>
       <span>{{ job.contract }}</span>
     </DotSpacer>
 
-    <h2 text="devjobs-primary-darkblue dark:devjobs-secondary-white xl" font="bold" m="b-3">
+    <h2 text="primary-darkblue dark:secondary-white xl" font="bold" m="b-3">
       {{ job.position }}
     </h2>
 
-    <span text="devjobs-secondary-darkgrey" m="b-11">{{ job.company }}</span>
+    <span text="secondary-darkgrey" m="b-11">{{ job.company }}</span>
 
-    <span text="devjobs-primary-violet sm" font="bold">{{ job.location }}</span>
+    <span text="primary-violet sm" font="bold">{{ job.location }}</span>
   </NuxtLink>
 </template>

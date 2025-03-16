@@ -13,19 +13,19 @@ defineProps({
 </script>
 
 <template>
-  <div bg="devjobs-secondary-white dark:devjobs-primary-darkblue" p="x-6 y-10 md:12">
+  <div bg="secondary-white dark:primary-darkblue" p="x-6 y-10 md:12">
     <div flex="~ col md:row" items="md:center" space="y-12.5 md:y-0 md:x-7.5" m="b-8 md:b-10">
       <div flex="1">
-        <DotSpacer text="devjobs-secondary-darkgrey">
+        <DotSpacer text="secondary-darkgrey">
           <span>{{ job.postedAt }}</span>
           <span>{{ job.contract }}</span>
         </DotSpacer>
 
-        <h1 text="28px devjobs-primary-darkblue dark:devjobs-secondary-white" font="bold">
+        <h1 text="28px primary-darkblue dark:secondary-white" font="bold">
           {{ job.position }}
         </h1>
 
-        <span text="devjobs-primary-violet sm" font="bold">{{ job.location }}</span>
+        <span text="primary-violet sm" font="bold">{{ job.location }}</span>
       </div>
 
       <div>
@@ -35,20 +35,20 @@ defineProps({
       </div>
     </div>
 
-    <p text="devjobs-secondary-darkgrey dark:devjobs-secondary-gray" font="leading-6.5" m="b-10">
+    <p text="secondary-darkgrey dark:secondary-gray" font="leading-6.5" m="b-10">
       {{ job.description }}
     </p>
 
-    <h2 text="xl devjobs-primary-darkblue dark:devjobs-secondary-white" font="bold" m="b-7">
+    <h2 text="xl primary-darkblue dark:secondary-white" font="bold" m="b-7">
       Requirements
     </h2>
 
-    <p text="devjobs-secondary-darkgrey dark:devjobs-secondary-gray" font="leading-6.5" m="b-10">
+    <p text="secondary-darkgrey dark:secondary-gray" font="leading-6.5" m="b-10">
       {{ job.requirements.content }}
     </p>
 
     <ul
-      text="devjobs-secondary-darkgrey dark:devjobs-secondary-gray marker:devjobs-primary-violet"
+      text="secondary-darkgrey dark:secondary-gray marker:primary-violet"
       p="l-3.5"
       font="leading-6.5"
       list="disc"
@@ -59,16 +59,16 @@ defineProps({
       </li>
     </ul>
 
-    <h2 text="xl devjobs-primary-darkblue dark:devjobs-secondary-white" font="bold" m="b-7">
+    <h2 text="xl primary-darkblue dark:secondary-white" font="bold" m="b-7">
       What You Will Do
     </h2>
 
-    <p text="devjobs-secondary-darkgrey dark:devjobs-secondary-gray" font="leading-6.5" m="b-10">
+    <p text="secondary-darkgrey dark:secondary-gray" font="leading-6.5" m="b-10">
       {{ job.role.content }}
     </p>
 
     <ol
-      text="devjobs-secondary-darkgrey dark:devjobs-secondary-gray marker:devjobs-primary-violet"
+      text="secondary-darkgrey dark:secondary-gray marker:primary-violet"
       p="l-2"
       font="leading-6.5"
       list="decimal"

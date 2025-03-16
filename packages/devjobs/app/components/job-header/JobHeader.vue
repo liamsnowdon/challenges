@@ -13,7 +13,7 @@ defineProps({
 
 <template>
   <div
-    bg="devjobs-secondary-white dark:devjobs-primary-darkblue"
+    bg="secondary-white dark:primary-darkblue"
     flex="~"
     justify="center"
     border="rounded-md"
@@ -46,10 +46,10 @@ defineProps({
       p="md:10"
     >
       <div flex="~ 1 col" space="y-2">
-        <h2 text="devjobs-primary-darkblue dark:devjobs-secondary-white xl" font="bold">
+        <h2 text="primary-darkblue dark:secondary-white xl" font="bold">
           {{ job.company }}
         </h2>
-        <span text="devjobs-secondary-darkgrey">{{ job.website }}</span>
+        <span text="secondary-darkgrey">{{ job.website }}</span>
       </div>
 
       <div>

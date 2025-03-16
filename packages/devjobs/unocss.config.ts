@@ -14,19 +14,17 @@ export default defineConfig({
 
   theme: {
     colors: {
-      devjobs: {
-        primary: {
-          violet: '#5964e0',
-          lightviolet: '#939bf4',
-          darkblue: '#19202d',
-          midnight: '#121721',
-        },
-        secondary: {
-          white: '#ffffff',
-          lightgrey: '#f4f6f8',
-          gray: '#9daec2',
-          darkgrey: '#6e8098',
-        },
+      primary: {
+        violet: '#5964e0',
+        lightviolet: '#939bf4',
+        darkblue: '#19202d',
+        midnight: '#121721',
+      },
+      secondary: {
+        white: '#ffffff',
+        lightgrey: '#f4f6f8',
+        gray: '#9daec2',
+        darkgrey: '#6e8098',
       },
     },
   },
@@ -39,6 +37,14 @@ export default defineConfig({
 
       html {
         scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: ${theme.colors.secondary.lightgrey};
+      }
+
+      html.dark body {
+        background-color: ${theme.colors.primary.midnight};
       }
     `,
   }],
