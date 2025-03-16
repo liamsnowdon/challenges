@@ -7,14 +7,6 @@ import JobDescription from '~/components/job-description/JobDescription.vue'
 import Button from '~/components/button/Button.vue'
 import { useFetch, useHead } from '#imports'
 
-useHead({
-  link: [
-    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-    { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap' },
-  ],
-})
-
 const route = useRoute()
 const id = route.params.id
 

@@ -8,14 +8,6 @@ import Pagination from '../components/pagination/Pagination.vue'
 import { useHead, useAsyncData } from '#imports'
 import type { JobEntity } from '~~/shared/types'
 
-useHead({
-  link: [
-    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-    { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap' },
-  ],
-})
-
 const page = ref(0)
 const jobs = ref<JobEntity[]>([])
 
