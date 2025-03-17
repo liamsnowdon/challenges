@@ -1,13 +1,4 @@
 export default defineNuxtConfig({
-  app: {
-    head: {
-      link: [
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap' },
-      ],
-    },
-  },
 
   modules: [
     '@nuxt/eslint',
@@ -21,19 +12,28 @@ export default defineNuxtConfig({
     dirs: [],
   },
 
-  colorMode: {
-    classSuffix: '',
-  },
-
   imports: {
     autoImport: false,
   },
 
   devtools: { enabled: true },
+  app: {
+    head: {
+      link: [
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap' },
+      ],
+    },
+  },
 
   css: [
     '@unocss/reset/tailwind.css',
   ],
+
+  colorMode: {
+    classSuffix: '',
+  },
 
   future: {
     compatibilityVersion: 4,

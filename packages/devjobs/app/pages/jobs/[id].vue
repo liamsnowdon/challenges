@@ -5,7 +5,7 @@ import WrapperContent from '~/components/wrapper/WrapperContent.vue'
 import JobHeader from '~/components/job-header/JobHeader.vue'
 import JobDescription from '~/components/job-description/JobDescription.vue'
 import Button from '~/components/button/Button.vue'
-import { useFetch, useHead } from '#imports'
+import { useFetch } from '#imports'
 
 const route = useRoute()
 const id = route.params.id

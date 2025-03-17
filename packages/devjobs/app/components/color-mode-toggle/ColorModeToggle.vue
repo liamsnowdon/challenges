@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import Icon from '../icon/Icon.vue'
 import { useColorMode } from '#imports'
 
 const colorMode = useColorMode()
@@ -17,7 +18,7 @@ function onClick () {
 
 <template>
   <div flex="~" items="center" space="x-4">
-    <img src="/images/desktop/icon-sun.svg">
+    <Icon name="sun" />
 
     <button
       type="button"
@@ -57,6 +58,6 @@ function onClick () {
       />
     </button>
 
-    <img src="/images/desktop/icon-moon.svg">
+    <Icon name="moon" />
   </div>
 </template>
