@@ -16,14 +16,21 @@ const fullTimeOnly = ref(false)
 const page = ref(0)
 const jobs = ref<JobEntity[]>([])
 
-const { data, status } = await useAsyncData(`jobs`, async () => {
+const { data, status, refresh } = await useAsyncData(`jobs`, async () => {
   const response = await $fetch('/api/jobs', {
     params: {
       page: page.value,
+      term: term.value || undefined,
+      location: location.value || undefined,
+      fullTimeOnly: fullTimeOnly.value || 'false',
     },
   })
 
-  jobs.value.push(...response.data)
+  if (page.value === 0) {
+    jobs.value = response.data
+  } else {
+    jobs.value.push(...response.data)
+  }
 
   return response
 }, {
@@ -34,8 +41,9 @@ function onPaginationClick () {
   page.value++
 }
 
-function onFiltersSubmit () {
+async function onFiltersSubmit () {
   console.log('Submit!')
+  await refresh()
 }
 </script>
 

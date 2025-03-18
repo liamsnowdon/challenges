@@ -5,7 +5,7 @@ export type JobEntity = {
   logoBackground: string
   position: string
   postedAt: string
-  contract: string
+  contract: 'Full Time' | 'Part Time' | 'Freelance'
   location: string
   website: string
   apply: string
