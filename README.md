@@ -6,3 +6,4 @@ The challenges are from Frontend Mentor, which help you improve your coding skil
 ## Challenges
 
 - [Advice Generator](./packages/advice-generator)
+- [Devjobs](./packages/devjobs)
