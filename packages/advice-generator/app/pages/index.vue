@@ -3,14 +3,6 @@ import AdviceCard from '../components/advice-card/AdviceCard.vue'
 import type { SlipEntity } from '../types'
 import { useFetch, useHead } from '#imports'
 
-useHead({
-  link: [
-    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-    { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap' },
-  ],
-})
-
 const { data: slip, refresh } = await useFetch<SlipEntity>('https://api.adviceslip.com/advice', {
   onResponse: (value) => {
     const parsed = JSON.parse(value.response._data)
