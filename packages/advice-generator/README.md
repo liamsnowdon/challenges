@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Advice Generator](https://challenges.liamsnowdon.uk/advice-generator)
+- Live Site URL: [Advice Generator](https://ls-challenges-advice-generator.netlify.app)
 
 ## Built with
 
