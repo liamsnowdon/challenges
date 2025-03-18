@@ -42,7 +42,7 @@ function onPaginationClick () {
 }
 
 async function onFiltersSubmit () {
-  console.log('Submit!')
+  page.value = 0
   await refresh()
 }
 </script>
