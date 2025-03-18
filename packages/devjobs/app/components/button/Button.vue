@@ -19,6 +19,10 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  fullWidth: {
+    type: Boolean,
+    default: false,
+  },
 })
 
 defineEmits<{
@@ -39,13 +43,19 @@ const variantClasses = computed(() => {
     ],
   }[props.variant]
 })
+
+const modifyClasses = computed(() => {
+  return {
+    'w-full': props.fullWidth,
+  }
+})
 </script>
 
 <template>
   <Component
     :is="as"
     :to="to"
-    :class="variantClasses"
+    :class="[variantClasses, modifyClasses]"
     class="relative inline-flex items-center justify-center h-12 px-10 rounded-5px whitespace-nowrap font-bold overflow-hidden focus:outline-none focus:ring-2 focus:ring-offset-2"
     @click="$emit('click', $event)"
   >

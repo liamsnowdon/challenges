@@ -1,8 +1,10 @@
 <script lang="ts" setup>
-import { defineModel } from 'vue'
+import { defineModel, ref, useTemplateRef } from 'vue'
 import InputText from '../forms/input-text/InputText.vue'
 import Button from '../button/Button.vue'
 import InputCheckbox from '../forms/input-checkbox/InputCheckbox.vue'
+import Icon from '../icon/Icon.vue'
+import Modal from '../modal/Modal.vue'
 
 defineEmits<{
   submit: []
@@ -11,6 +13,16 @@ defineEmits<{
 const term = defineModel<string>('term')
 const location = defineModel<string>('location')
 const fullTimeOnly = defineModel<boolean>('full-time-only')
+
+const filterModal = useTemplateRef('filterModal')
+
+function openFilterModal () {
+  filterModal.value?.showModal()
+}
+
+function submitFilterModal () {
+  filterModal.value?.hideModal()
+}
 </script>
 
 <template>
@@ -22,14 +34,16 @@ const fullTimeOnly = defineModel<boolean>('full-time-only')
     border="rounded-md"
     @submit.prevent="$emit('submit')"
   >
-    <div h="full" p="4 l-8">
+    <div flex="~" h="full" p="4 l-8" space="x-6">
       <InputText
         v-model="term"
         icon="search"
         placeholder="Filter by title, companies, expertise..."
       />
 
-      <button type="button" />
+      <button type="button" class="md:hidden" @click="openFilterModal">
+        <Icon name="filter" />
+      </button>
     </div>
 
     <div h="full" p="4 l-8" class="hidden md:block">
@@ -48,4 +62,24 @@ const fullTimeOnly = defineModel<boolean>('full-time-only')
       </Button>
     </div>
   </form>
+
+  <Modal ref="filterModal">
+    <form method="dialog" @submit.prevent="submitFilterModal">
+      <div p="6" border="b secondary-darkgrey/20">
+        <InputText
+          v-model="location"
+          icon="location"
+          placeholder="Filter by location..."
+        />
+      </div>
+
+      <div p="6" space="y-6">
+        <InputCheckbox v-model="fullTimeOnly" label="Full Time Only" />
+
+        <Button type="submit" full-width>
+          Search
+        </Button>
+      </div>
+    </form>
+  </Modal>
 </template>

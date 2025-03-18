@@ -32,7 +32,7 @@ const model = defineModel<boolean>()
       z="1"
       w="6"
       h="6"
-      bg="secondary-white/10 group-hover:primary-violet/25 !peer-checked:primary-violet"
+      bg="primary-darkblue/10 dark:secondary-white/10 group-hover:primary-violet/25 !peer-checked:primary-violet"
       rounded="3px"
       m="r-4"
       text="secondary-white"
@@ -40,6 +40,6 @@ const model = defineModel<boolean>()
       <Icon v-show="model" name="check" />
     </span>
 
-    <span text="secondary-white" font="bold">{{ label }}</span>
+    <span text="primary-darkblue dark:secondary-white" font="bold">{{ label }}</span>
   </label>
 </template>
