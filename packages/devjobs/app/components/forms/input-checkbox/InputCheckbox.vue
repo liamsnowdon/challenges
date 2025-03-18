@@ -11,7 +11,7 @@ const model = defineModel<boolean>()
 
 <template>
   <label
-    flex="~"
+    flex="~ 1"
     items="center"
     pos="relative"
     cursor="pointer"

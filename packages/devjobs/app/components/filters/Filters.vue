@@ -1,12 +1,13 @@
 <script lang="ts" setup>
-import { defineModel, ref, useTemplateRef } from 'vue'
+import { defineModel, useTemplateRef } from 'vue'
 import InputText from '../forms/input-text/InputText.vue'
 import Button from '../button/Button.vue'
 import InputCheckbox from '../forms/input-checkbox/InputCheckbox.vue'
 import Icon from '../icon/Icon.vue'
 import Modal from '../modal/Modal.vue'
+import useBreakpoints from '~/composables/useBreakpoints'
 
-defineEmits<{
+const emit = defineEmits<{
   submit: []
 }>()
 
@@ -14,6 +15,7 @@ const term = defineModel<string>('term')
 const location = defineModel<string>('location')
 const fullTimeOnly = defineModel<boolean>('full-time-only')
 
+const { isDesktop } = useBreakpoints()
 const filterModal = useTemplateRef('filterModal')
 
 function openFilterModal () {
@@ -22,6 +24,7 @@ function openFilterModal () {
 
 function submitFilterModal () {
   filterModal.value?.hideModal()
+  emit('submit')
 }
 </script>
 
@@ -29,24 +32,33 @@ function submitFilterModal () {
   <form
     bg="secondary-white dark:primary-darkblue"
     m="t--4 md:t--10 b-14.25 md:b-17.5 lg:b-26.25"
-    grid="~ cols-1 md:cols-3"
+    grid="~ cols-1 md:cols-12"
     divide="x secondary-darkgrey/20"
     border="rounded-md"
     @submit.prevent="$emit('submit')"
   >
-    <div flex="~" h="full" p="4 l-8" space="x-6">
+    <div
+      grid="md:col-span-4 lg:col-span-5"
+      flex="~"
+      h="full"
+      p="4 l-8"
+      space="x-6"
+    >
       <InputText
         v-model="term"
         icon="search"
-        placeholder="Filter by title, companies, expertise..."
+        :icon-on-mobile="false"
+        :placeholder="isDesktop ? 'Filter by title, companies, expertise...' : 'Filter by title...'"
       />
 
-      <button type="button" class="md:hidden" @click="openFilterModal">
+      <button flex="none" type="button" class="md:hidden" @click="openFilterModal">
         <Icon name="filter" />
       </button>
+
+      <Button icon="search-white" icon-only class="md:hidden" />
     </div>
 
-    <div h="full" p="4 l-8" class="hidden md:block">
+    <div grid="md:col-span-4 lg:col-span-3" h="full" p="4 l-8" class="hidden md:block">
       <InputText
         v-model="location"
         icon="location"
@@ -54,10 +66,16 @@ function submitFilterModal () {
       />
     </div>
 
-    <div items="center" p="4 l-8" space="x-6.5" class="hidden md:flex">
-      <InputCheckbox v-model="fullTimeOnly" label="Full Time Only" />
+    <div
+      grid="md:col-span-4 lg:col-span-4"
+      items="center"
+      p="4 l-8"
+      space="x-6.5"
+      class="hidden md:flex"
+    >
+      <InputCheckbox v-model="fullTimeOnly" :label="isDesktop ? 'Full Time Only' : 'Full Time'" />
 
-      <Button type="submit">
+      <Button type="submit" p="x-2.5 lg:x-10">
         Search
       </Button>
     </div>
