@@ -81,16 +81,24 @@ img {
 
   .links__item {
     width: 100%;
-    background-color: var(--grey-700);
-    font-weight: bold;
     list-style: none;
-    border-radius: 8px;
 
     a {
       display: block;
       padding: 16px 0;
       color: var(--white);
       text-decoration: none;
+      background-color: var(--grey-700);
+      font-weight: bold;
+      border-radius: 8px;
+      transition-duration: 200ms;
+      transition-behavior: ease-out;
+      transition-property: color background-color;
+    }
+
+    a:hover {
+      background-color: var(--green);
+      color: var(--grey-900);
     }
   }
  
