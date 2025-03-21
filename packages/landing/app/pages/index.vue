@@ -20,6 +20,13 @@ const challenges: Challenge[] = [
     challenge_url: 'https://www.frontendmentor.io/challenges/devjobs-web-app-HuvC_LP4l',
     body: '',
   },
+  {
+    name: 'Social Links',
+    slug: 'social-links',
+    intro: 'A social link-sharing profile.',
+    challenge_url: 'https://www.frontendmentor.io/challenges/social-links-profile-UG32l9m6dQ',
+    body: '',
+  },
 ]
 </script>
 
