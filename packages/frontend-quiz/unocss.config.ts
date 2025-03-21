@@ -13,6 +13,12 @@ export default defineConfig({
   ],
 
   theme: {
+    fontSize: {
+      '4xl': '2.5rem',
+      '6xl': '4rem',
+      '7xl': '9rem',
+    },
+
     colors: {
       white: '#ffffff',
       black: '#000000',
