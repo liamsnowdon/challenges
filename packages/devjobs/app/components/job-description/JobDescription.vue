@@ -76,7 +76,7 @@ defineProps({
       class="[counter-reset:list-number]"
     >
       <li
-        v-for="item in job.requirements.items"
+        v-for="item in job.role.items"
         :key="item"
         p="l-7.5"
         class="[counter-increment:list-number] marker:[content:counter(list-number)] marker:font-bold"
