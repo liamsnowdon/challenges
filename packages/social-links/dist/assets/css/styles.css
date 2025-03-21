@@ -1,0 +1,122 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+:root {
+  --green: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --grey-700: hsl(0, 0%, 20%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--grey-900);
+  font-family: Inter, sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+
+  .container__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 340px;
+    background-color: var(--grey-800);
+    padding: 24px;
+    border-radius: 12px;
+
+    @media (min-width: 640px) {
+      padding: 40px;
+    }
+  }
+}
+
+.avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  height: 88px;
+  width: 88px;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 24px;
+  line-height: 150%;
+  font-weight: bold;
+  color: var(--white);
+  margin: 0 0 4px;
+}
+
+.subtitle {
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: bold;
+  color: var(--green);
+  margin: 0 0 20px;
+}
+
+.quote {
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--white);
+  margin: 0 0 24px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  .links__item {
+    width: 100%;
+    list-style: none;
+
+    a {
+      display: block;
+      padding: 12px;
+      color: var(--white);
+      text-decoration: none;
+      background-color: var(--grey-700);
+      line-height: 150%;
+      font-weight: bold;
+      font-size: 14px;
+      border-radius: 8px;
+      transition-duration: 200ms;
+      transition-behavior: ease-out;
+      transition-property: color background-color;
+    }
+
+    a:hover {
+      background-color: var(--green);
+      color: var(--grey-900);
+    }
+  }
+ 
+  .links__item:not(:first-child) {
+    margin-top: 16px;
+  }
+}
