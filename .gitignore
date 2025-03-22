@@ -23,4 +23,6 @@ logs
 .env.*
 !.env.example
 
+# Packages
 !packages/social-links/dist
+!packages/qr-code-component/dist
