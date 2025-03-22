@@ -15,6 +15,7 @@ const { question, quiz, activeQuestionIndex } = defineProps<{
 const emit = defineEmits<{
   correct: []
   next: []
+  finish: []
 }>()
 
 const hasSubmitted = ref(false)
@@ -46,6 +47,10 @@ function onOptionSelect (option: Question['options'][number]) {
 function onNextQuestionClick () {
   emit('next')
 }
+
+function onFinishQuizClick () {
+  emit('finish')
+}
 </script>
 
 <template>
@@ -74,11 +79,15 @@ function onNextQuestionClick () {
         @select="onOptionSelect(option)"
       />
 
-      <Button v-if="hasSubmitted" @click="onNextQuestionClick">
+      <Button v-if="hasSubmitted && (activeQuestionIndex + 1) >= quiz.questions.length" type="button" @click="onFinishQuizClick">
+        Finish Quiz
+      </Button>
+
+      <Button v-else-if="hasSubmitted" type="button" @click="onNextQuestionClick">
         Next Question
       </Button>
 
-      <Button v-else @click="onSubmit">
+      <Button v-else type="button" @click="onSubmit">
         Submit Answer
       </Button>
 

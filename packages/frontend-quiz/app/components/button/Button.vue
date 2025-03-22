@@ -1,12 +1,27 @@
 <script lang="ts" setup>
+import { computed, resolveComponent } from 'vue'
+
+const { to } = defineProps<{
+  to?: { name: string }
+}>()
+
 defineEmits<{
   click: [Event]
 }>()
+
+const component = computed(() => {
+  if (to) {
+    return resolveComponent('NuxtLink')
+  }
+
+  return 'button'
+})
 </script>
 
 <template>
-  <button
-    type="button"
+  <Component
+    :is="component"
+    :to="to"
     pos="relative"
     flex="none inline"
     items="center"
@@ -18,10 +33,9 @@ defineEmits<{
     overflow="hidden"
     outline="focus:none"
     ring="focus:2 focus:offset-2 focus:purple-600 focus:offset-black"
-    text="white"
     bg="purple-600 hover:purple-600/50"
     w="full"
-    class="text-preset-4-mobile md:text-preset-4"
+    class="text-preset-4-mobile md:text-preset-4 text-white"
     @click="$emit('click', $event)"
   >
     <span
@@ -31,5 +45,5 @@ defineEmits<{
     >
       <slot />
     </span>
-  </button>
+  </Component>
 </template>

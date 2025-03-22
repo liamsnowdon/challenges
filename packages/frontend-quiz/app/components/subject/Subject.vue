@@ -16,8 +16,9 @@ defineProps<{
     p="4"
     bg="white dark:blue-850"
     border="rounded-xl"
-    ring="3 transparent hover:purple-600"
+    ring="3 transparent hover:purple-600 focus:purple-600"
     w="full"
+    outline="focus:none"
   >
     <SubjectIcon :icon="icon" />
 

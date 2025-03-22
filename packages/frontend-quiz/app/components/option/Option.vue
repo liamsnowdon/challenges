@@ -24,6 +24,7 @@ function onClick () {
 
 <template>
   <button
+    type="button"
     flex="~"
     items="center"
     space="x-4"
@@ -33,11 +34,12 @@ function onClick () {
     ring="3"
     w="full"
     text="left"
+    outline="focus:none"
     :class="{
       'ring-purple-600': isActive && !isSubmitted,
       'ring-green-500': isActive && isSubmitted && isCorrect,
       'ring-red-500': isActive && isSubmitted && !isCorrect,
-      'ring-transparent hover:ring-purple-600': !isSubmitted && !isActive,
+      'ring-transparent hover:ring-purple-600 focus:ring-purple-600': !isSubmitted && !isActive,
       'ring-transparent': isSubmitted && !isActive,
     }"
     @click="onClick"

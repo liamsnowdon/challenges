@@ -10,7 +10,6 @@ defineProps<{
       h="full"
       bg="purple-600"
       rounded="full"
-      transition="width duration-200"
       :style="{
         width: `${percentage}%`,
       }"

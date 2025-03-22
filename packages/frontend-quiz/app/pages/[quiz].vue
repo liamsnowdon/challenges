@@ -7,6 +7,7 @@ import WrapperContent from '~/components/wrapper/WrapperContent.vue'
 import { createError } from '#imports'
 import quizzes from '~/assets/data/quizzes.json'
 import Question from '~/components/question/Question.vue'
+import Results from '~/components/results/Results.vue'
 import type { QuizEntity } from '~~/shared/types'
 
 const route = useRoute()
@@ -19,6 +20,7 @@ if (!quiz) {
   })
 }
 
+const state = ref<'started' | 'finish'>('started')
 const score = ref(0)
 const activeQuestionIndex = ref(0)
 const question = computed(() => quiz.questions[activeQuestionIndex.value]!)
@@ -30,6 +32,10 @@ function onCorrectAnswer () {
 function onNextQuestion () {
   activeQuestionIndex.value++
 }
+
+function onFinish () {
+  state.value = 'finish'
+}
 </script>
 
 <template>
@@ -39,12 +45,20 @@ function onNextQuestion () {
     <Wrapper>
       <WrapperContent>
         <Question
+          v-if="state === 'started'"
           :key="question.question"
           :question="question"
           :quiz="quiz"
           :active-question-index="activeQuestionIndex"
           @correct="onCorrectAnswer"
           @next="onNextQuestion"
+          @finish="onFinish"
+        />
+
+        <Results
+          v-else-if="state === 'finish'"
+          :quiz="quiz"
+          :score="score"
         />
       </WrapperContent>
     </Wrapper>
