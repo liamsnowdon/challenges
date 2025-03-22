@@ -17,6 +17,14 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'en',
+      },
+    },
+  },
+
   css: [
     '@unocss/reset/tailwind.css',
   ],

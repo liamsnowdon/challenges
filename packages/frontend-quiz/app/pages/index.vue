@@ -1,9 +1,15 @@
 <script lang="ts" setup>
+import { useSeoMeta } from '#imports'
 import Header from '~/components/header/Header.vue'
 import Wrapper from '~/components/wrapper/Wrapper.vue'
 import WrapperContent from '~/components/wrapper/WrapperContent.vue'
 import Subject from '~/components/subject/Subject.vue'
 import quizzes from '~/assets/data/quizzes.json'
+
+useSeoMeta({
+  title: 'Welcome to the Frontend Quiz | Frontend Mentor Frontend Quiz',
+  description: 'Test your frontend development skills with our interactive quiz! Challenge yourself with questions on HTML, CSS, JavaScript, and Accessibility, and level up your web development expertise.',
+})
 </script>
 
 <template>

@@ -4,7 +4,7 @@ import { useRoute } from 'vue-router'
 import Header from '~/components/header/Header.vue'
 import Wrapper from '~/components/wrapper/Wrapper.vue'
 import WrapperContent from '~/components/wrapper/WrapperContent.vue'
-import { createError } from '#imports'
+import { createError, useSeoMeta } from '#imports'
 import quizzes from '~/assets/data/quizzes.json'
 import Question from '~/components/question/Question.vue'
 import Results from '~/components/results/Results.vue'
@@ -19,6 +19,24 @@ if (!quiz) {
     message: 'Subject not found',
   })
 }
+
+useSeoMeta({
+  title: `${quiz.title} Quiz | Frontend Mentor Frontend Quiz`,
+  description: () => {
+    if (quiz.title === 'HTML') {
+      return 'Test your HTML skills with our interactive quiz! From basic tags to advanced elements, challenge yourself and level up your web development knowledge.'
+    }
+    if (quiz.title === 'CSS') {
+      return 'Think you know CSS? Take our quiz and prove your styling expertise! From selectors to rules, see how well you can master the art of design.'
+    }
+    if (quiz.title === 'JavaScript') {
+      return 'Ready to put your JavaScript knowledge to the test? Try our quiz and tackle questions on functions, loops, and more!'
+    }
+    if (quiz.title === 'Accessibility') {
+      return 'How accessible is your web knowledge? Take our accessibility quiz and learn best practices for building inclusive and user-friendly websites.'
+    }
+  },
+})
 
 const state = ref<'started' | 'finish'>('started')
 const score = ref(0)
