@@ -32,7 +32,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./challenge/screenshot.jpeg)
+![](./challenge/screenshot-selected.jpeg)
+![](./challenge/screenshot-correct.jpeg)
+![](./challenge/screenshot-incorrect.jpeg)
+![](./challenge/screenshot-results.jpeg)
 
 ### Links
 
