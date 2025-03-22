@@ -31,9 +31,7 @@ import quizzes from '~/assets/data/quizzes.json'
               :name="quiz.title"
               :icon="quiz.icon"
               :is-active="false"
-            >
-              {{ quiz.title }}
-            </Subject>
+            />
           </div>
         </div>
       </WrapperContent>

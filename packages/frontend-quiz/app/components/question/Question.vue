@@ -1,22 +1,50 @@
 <script lang="ts" setup>
-import { computed } from 'vue'
-import Answer from '../answer/Answer.vue'
+import { computed, ref } from 'vue'
+import Option from '../option/Option.vue'
 import Progress from '../progress/Progress.vue'
 import Button from '../button/Button.vue'
+import ErrorMessage from '../error-message/ErrorMessage.vue'
 import type { Question, QuizEntity } from '~~/shared/types'
 
-const { quiz, activeQuestionIndex } = defineProps<{
+const { question, quiz, activeQuestionIndex } = defineProps<{
   question: Question
   quiz: QuizEntity
   activeQuestionIndex: number
 }>()
 
+const emit = defineEmits<{
+  correct: []
+  next: []
+}>()
+
+const hasSubmitted = ref(false)
+const showRequiredError = ref(false)
+const selectedOption = ref<string | null>(null)
+
 const progress = computed(() => {
   return (activeQuestionIndex / quiz.questions.length) * 100
 })
 
-function submit () {
-  console.log('submit')
+function onSubmit () {
+  if (!selectedOption.value) {
+    showRequiredError.value = true
+    return
+  }
+
+  hasSubmitted.value = true
+
+  if (selectedOption.value === question.answer) {
+    emit('correct')
+  }
+}
+
+function onOptionSelect (option: Question['options'][number]) {
+  selectedOption.value = option
+  showRequiredError.value = false
+}
+
+function onNextQuestionClick () {
+  emit('next')
 }
 </script>
 
@@ -35,19 +63,26 @@ function submit () {
     </div>
 
     <div space="y-4">
-      <Answer
+      <Option
         v-for="(option, index) in question.options"
         :key="option"
-        :name="option"
+        :option="option"
         :index="index"
-        :is-active="false"
-      >
-        {{ quiz.title }}
-      </Answer>
+        :is-active="selectedOption === option"
+        :is-correct="option === question.answer"
+        :is-submitted="hasSubmitted"
+        @select="onOptionSelect(option)"
+      />
 
-      <Button @click="submit">
+      <Button v-if="hasSubmitted" @click="onNextQuestionClick">
+        Next Question
+      </Button>
+
+      <Button v-else @click="onSubmit">
         Submit Answer
       </Button>
+
+      <ErrorMessage v-if="showRequiredError" message="Please select an answer" />
     </div>
   </div>
 </template>

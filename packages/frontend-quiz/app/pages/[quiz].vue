@@ -19,8 +19,17 @@ if (!quiz) {
   })
 }
 
+const score = ref(0)
 const activeQuestionIndex = ref(0)
 const question = computed(() => quiz.questions[activeQuestionIndex.value]!)
+
+function onCorrectAnswer () {
+  score.value++
+}
+
+function onNextQuestion () {
+  activeQuestionIndex.value++
+}
 </script>
 
 <template>
@@ -29,7 +38,14 @@ const question = computed(() => quiz.questions[activeQuestionIndex.value]!)
 
     <Wrapper>
       <WrapperContent>
-        <Question :question="question" :quiz="quiz" :active-question-index="activeQuestionIndex" />
+        <Question
+          :key="question.question"
+          :question="question"
+          :quiz="quiz"
+          :active-question-index="activeQuestionIndex"
+          @correct="onCorrectAnswer"
+          @next="onNextQuestion"
+        />
       </WrapperContent>
     </Wrapper>
   </div>
