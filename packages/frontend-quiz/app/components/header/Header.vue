@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import ColorModeToggle from '../color-mode-toggle/ColorModeToggle.vue'
-import WrapperContent from '../wrapper/WrapperContent.vue'
 import Logo from '../logo/Logo.vue'
+import Content from '~/components/content/Content.vue'
 import type { QuizEntity } from '~~/shared/types'
 
 defineProps<{
@@ -12,12 +12,15 @@ defineProps<{
 <template>
   <header
     w="full"
-    p="y-6.5 x-6 md:t-13.5 md:b-11.75 md:x-16"
+    h="18 md:14"
+    p="x-6 md:x-0"
+    m="b-8 md:b-12.25 lg:b-21.25"
     bg="center cover no-repeat"
   >
-    <WrapperContent
+    <Content
+      h="full"
       flex="~"
-      items="start"
+      items="center"
       justify="between"
     >
       <div>
@@ -25,6 +28,6 @@ defineProps<{
       </div>
 
       <ColorModeToggle />
-    </WrapperContent>
+    </Content>
   </header>
 </template>

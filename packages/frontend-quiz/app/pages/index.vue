@@ -1,8 +1,7 @@
 <script lang="ts" setup>
 import { useSeoMeta } from '#imports'
 import Header from '~/components/header/Header.vue'
-import Wrapper from '~/components/wrapper/Wrapper.vue'
-import WrapperContent from '~/components/wrapper/WrapperContent.vue'
+import Content from '~/components/content/Content.vue'
 import Subject from '~/components/subject/Subject.vue'
 import quizzes from '~/assets/data/quizzes.json'
 
@@ -13,11 +12,11 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
+  <div p="md:x-16 md:y-10">
     <Header />
 
-    <Wrapper>
-      <WrapperContent>
+    <div p="x-6 md:x-0">
+      <Content>
         <div grid="~ cols-1 lg:cols-2 gap-10 md:gap-16">
           <div space="y-4">
             <h1 text="blue-900 dark:white">
@@ -40,7 +39,7 @@ useSeoMeta({
             />
           </div>
         </div>
-      </WrapperContent>
-    </Wrapper>
+      </Content>
+    </div>
   </div>
 </template>

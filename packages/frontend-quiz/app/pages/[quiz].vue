@@ -2,8 +2,7 @@
 import { computed, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import Header from '~/components/header/Header.vue'
-import Wrapper from '~/components/wrapper/Wrapper.vue'
-import WrapperContent from '~/components/wrapper/WrapperContent.vue'
+import Content from '~/components/content/Content.vue'
 import { createError, useSeoMeta } from '#imports'
 import quizzes from '~/assets/data/quizzes.json'
 import Question from '~/components/question/Question.vue'
@@ -57,11 +56,11 @@ function onFinish () {
 </script>
 
 <template>
-  <div v-if="quiz">
+  <div v-if="quiz" p="md:x-16 md:y-10">
     <Header :quiz="quiz" />
 
-    <Wrapper>
-      <WrapperContent>
+    <div p="x-6 md:x-0">
+      <Content>
         <Question
           v-if="state === 'started'"
           :key="question.question"
@@ -78,7 +77,7 @@ function onFinish () {
           :quiz="quiz"
           :score="score"
         />
-      </WrapperContent>
-    </Wrapper>
+      </Content>
+    </div>
   </div>
 </template>
