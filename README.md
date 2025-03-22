@@ -7,3 +7,4 @@ This is a collection of frontend coding challenges from Frontend Mentor, which h
 - [Advice Generator](./packages/advice-generator)
 - [Devjobs](./packages/devjobs)
 - [Social Links](./packages/social-links)
+- [Frontend Quiz](./packages/frontend-quiz)

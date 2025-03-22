@@ -74,6 +74,7 @@ export default defineConfig({
 
       body {
         background: ${theme.colors.grey[50]} url('/images/pattern-backgrounds/mobile-light.svg') no-repeat center center / cover;
+        font-family: Rubik, sans-serif;
       }
 
       html.dark body {
