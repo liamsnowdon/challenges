@@ -19,7 +19,7 @@ Your challenge is to build out this QR code component and get it looking as clos
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./challenge/screenshot.jpeg)
 
 ### Links
 

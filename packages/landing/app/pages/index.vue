@@ -7,17 +7,17 @@ import type { Challenge } from '../types'
 
 const challenges: Challenge[] = [
   {
-    name: 'Advice Generator',
-    slug: 'advice-generator',
-    intro: 'Using the Advice Slip API to generate random quotes of advice.',
-    challenge_url: 'https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db',
+    name: 'QR Code Component',
+    slug: 'qr-code-component',
+    intro: 'A simple QR code component in a card.',
+    challenge_url: 'https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H',
     body: '',
   },
   {
-    name: 'Devjobs',
-    slug: 'devjobs',
-    intro: 'A jobs board that lists developer jobs.',
-    challenge_url: 'https://www.frontendmentor.io/challenges/devjobs-web-app-HuvC_LP4l',
+    name: 'Frontend Quiz',
+    slug: 'frontend-quiz',
+    intro: 'A quiz app for testing your frontend knowledge.',
+    challenge_url: 'https://www.frontendmentor.io/challenges/frontend-quiz-app-BE7xkzXQnU',
     body: '',
   },
   {
@@ -28,10 +28,17 @@ const challenges: Challenge[] = [
     body: '',
   },
   {
-    name: 'Frontend Quiz',
-    slug: 'frontend-quiz',
-    intro: 'A quiz app for testing your frontend knowledge.',
-    challenge_url: 'https://www.frontendmentor.io/challenges/frontend-quiz-app-BE7xkzXQnU',
+    name: 'Devjobs',
+    slug: 'devjobs',
+    intro: 'A jobs board that lists developer jobs.',
+    challenge_url: 'https://www.frontendmentor.io/challenges/devjobs-web-app-HuvC_LP4l',
+    body: '',
+  },
+  {
+    name: 'Advice Generator',
+    slug: 'advice-generator',
+    intro: 'Using the Advice Slip API to generate random quotes of advice.',
+    challenge_url: 'https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db',
     body: '',
   },
 ]

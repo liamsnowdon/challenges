@@ -4,7 +4,8 @@ This is a collection of frontend coding challenges from Frontend Mentor, which h
 
 ## Challenges
 
-- [Advice Generator](./packages/advice-generator)
-- [Devjobs](./packages/devjobs)
-- [Social Links](./packages/social-links)
+- [QR Code Component](./packages/qr-code-component)
 - [Frontend Quiz](./packages/frontend-quiz)
+- [Social Links](./packages/social-links)
+- [Devjobs](./packages/devjobs)
+- [Advice Generator](./packages/advice-generator)
