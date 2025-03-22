@@ -14,11 +14,12 @@ import quizzes from '~/assets/data/quizzes.json'
       <WrapperContent>
         <div grid="~ cols-1 lg:cols-2 gap-10 md:gap-16">
           <div space="y-4">
-            <h1 text="4xl md:6xl blue-900 dark:white" font="light">
-              Welcome to the <span font="medium">Frontend Quiz!</span>
+            <h1 text="blue-900 dark:white">
+              <span class="text-preset-2-mobile-light md:text-preset-2-light">Welcome to the </span>
+              <span class="text-preset-2-mobile-medium md:text-preset-2-medium">Frontend Quiz!</span>
             </h1>
 
-            <p text="sm md:xl grey-500 dark:blue-300" font="leading-7.5 italic">
+            <p class="text-preset-5-mobile md:text-preset-6" text="grey-500 dark:blue-300">
               Pick a subject to get started.
             </p>
           </div>

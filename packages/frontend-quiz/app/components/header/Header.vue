@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import ColorModeToggle from '../color-mode-toggle/ColorModeToggle.vue'
 import WrapperContent from '../wrapper/WrapperContent.vue'
+import SubjectIcon from '../subject-icon/SubjectIcon.vue'
 import type { QuizEntity } from '~~/shared/types'
 
 defineProps<{
@@ -19,10 +20,12 @@ defineProps<{
       items="start"
       justify="between"
     >
-      <!-- <NuxtLink :to="{ name: 'index' }">
-        <img src="/images/desktop/logo.svg" alt="devjobs logo" width="115" height="32">
-      </NuxtLink> -->
-      <div />
+      <div flex="~" items="center" space="x-4 md:x-6">
+        <template v-if="quiz">
+          <SubjectIcon v-if="quiz" :icon="quiz.icon" />
+          <span class="text-preset-4-mobile md:text-preset-4" text="blue-900 dark:white">{{ quiz.title }}</span>
+        </template>
+      </div>
 
       <ColorModeToggle />
     </WrapperContent>

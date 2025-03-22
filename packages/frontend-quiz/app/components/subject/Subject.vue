@@ -1,13 +1,9 @@
 <script lang="ts" setup>
-import Icon from '../icon/Icon.vue'
+import SubjectIcon from '../subject-icon/SubjectIcon.vue'
 
 defineProps<{
-  name: string
   icon: string
-}>()
-
-defineEmits<{
-  select: []
+  name: string
 }>()
 </script>
 
@@ -23,23 +19,8 @@ defineEmits<{
     ring="3 transparent hover:purple-600"
     w="full"
   >
-    <div
-      flex="~"
-      items="center"
-      justify="center"
-      w="10 md:14"
-      h="10 md:14"
-      rounded="lg"
-      :class="{
-        'bg-orange-50': icon === 'html',
-        'bg-green-100': icon === 'css',
-        'bg-blue-50': icon === 'js',
-        'bg-purple-100': icon === 'accessibility',
-      }"
-    >
-      <Icon :name="icon" h="7 md:10" />
-    </div>
+    <SubjectIcon :icon="icon" />
 
-    <span text="lg blue-900 dark:white" font="medium">{{ name }}</span>
+    <span class="text-preset-4-mobile md:text-preset-4" p="md:x-4" text="blue-900 dark:white">{{ name }}</span>
   </NuxtLink>
 </template>

@@ -1,7 +1,6 @@
 import {
   defineConfig,
   presetAttributify,
-  presetIcons,
 } from 'unocss'
 import { presetWind3 } from '@unocss/preset-wind3'
 
@@ -9,16 +8,26 @@ export default defineConfig({
   presets: [
     presetWind3(),
     presetAttributify(),
-    presetIcons({}),
   ],
 
-  theme: {
-    fontSize: {
-      '4xl': '2.5rem',
-      '6xl': '4rem',
-      '7xl': '9rem',
-    },
+  shortcuts: {
+    'text-preset-1': 'text-[144px] leading-none font-medium',
+    'text-preset-1-mobile': 'text-[88px] leading-none font-medium',
+    'text-preset-2-medium': 'text-[64px] leading-none font-medium',
+    'text-preset-2-mobile-medium': 'text-[40px] leading-none font-medium',
+    'text-preset-2-light': 'text-[64px] leading-none font-light',
+    'text-preset-2-mobile-light': 'text-[40px] leading-none font-light',
+    'text-preset-3': 'text-[36px] leading-10.75 font-medium',
+    'text-preset-3-mobile': 'text-[20px] leading-6 font-medium',
+    'text-preset-4': 'text-[28px] leading-none font-medium',
+    'text-preset-4-mobile': 'text-[18px] leading-none font-medium',
+    'text-preset-5-medium': 'text-[24px] leading-9 font-medium',
+    'text-preset-5-regular': 'text-[24px] leading-9',
+    'text-preset-5-mobile': 'text-[14px] leading-5.25 italic',
+    'text-preset-6': 'text-[20px] leading-7.5 italic',
+  },
 
+  theme: {
     colors: {
       white: '#ffffff',
       black: '#000000',
