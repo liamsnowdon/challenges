@@ -24,6 +24,7 @@ function onClick () {
 
 <template>
   <button
+    :disabled="isSubmitted"
     type="button"
     flex="~"
     items="center"
@@ -55,7 +56,7 @@ function onClick () {
         'bg-purple-600 text-white': isActive && !isSubmitted,
         'bg-green-500 text-white': isActive && isSubmitted && isCorrect,
         'bg-red-500 text-white': isActive && isSubmitted && !isCorrect,
-        'bg-grey-50 text-grey-500': !isSubmitted || !isActive,
+        'bg-grey-50 text-grey-500': (!isSubmitted && !isActive) || (isSubmitted && !isActive),
       }"
     >
       <span class="text-preset-4-mobile md:text-preset-4">{{ letter }}</span>

@@ -33,7 +33,7 @@ const component = computed(() => {
     overflow="hidden"
     outline="focus:none"
     ring="focus:2 focus:offset-2 focus:purple-600 focus:offset-black"
-    bg="purple-600 hover:purple-600/50"
+    bg="purple-600 hover:purple-400"
     w="full"
     class="text-preset-4-mobile md:text-preset-4 text-white"
     @click="$emit('click', $event)"
