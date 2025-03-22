@@ -27,6 +27,13 @@ const challenges: Challenge[] = [
     challenge_url: 'https://www.frontendmentor.io/challenges/social-links-profile-UG32l9m6dQ',
     body: '',
   },
+  {
+    name: 'Frontend Quiz',
+    slug: 'frontend-quiz',
+    intro: 'A quiz app for testing your frontend knowledge.',
+    challenge_url: 'https://www.frontendmentor.io/challenges/frontend-quiz-app-BE7xkzXQnU',
+    body: '',
+  },
 ]
 </script>
 
