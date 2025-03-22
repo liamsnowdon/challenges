@@ -73,11 +73,31 @@ export default defineConfig({
       }
 
       body {
-        background-color: ${theme.colors.grey[50]};
+        background: ${theme.colors.grey[50]} url('/images/pattern-backgrounds/mobile-light.svg') no-repeat center center / cover;
       }
 
       html.dark body {
-        background-color: ${theme.colors.blue[900]};
+        background: ${theme.colors.blue[900]} url('/images/pattern-backgrounds/mobile-dark.svg') no-repeat center center / cover;
+      }
+
+      @media screen and (min-width: 768px) {
+        body {
+          background: ${theme.colors.grey[50]} url('/images/pattern-backgrounds/tablet-light.svg') no-repeat center center / cover;
+        }
+
+        html.dark body {
+          background: ${theme.colors.blue[900]} url('/images/pattern-backgrounds/tablet-dark.svg') no-repeat center center / cover;
+        }
+      }
+
+      @media screen and (min-width: 1024px) {
+        body {
+          background: ${theme.colors.grey[50]} url('/images/pattern-backgrounds/desktop-light.svg') no-repeat center center / cover;
+        }
+
+        html.dark body {
+          background: ${theme.colors.blue[900]} url('/images/pattern-backgrounds/desktop-dark.svg') no-repeat center center / cover;
+        }
       }
     `,
   }],
