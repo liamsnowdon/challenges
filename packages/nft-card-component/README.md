@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [NFT Preview Card Component](https://ls-challenges-nft-preview-card-component.netlify.app)
+- Live Site URL: [NFT Preview Card Component](https://ls-challenges-nft-card-component.netlify.app)
 
 ## Built with
 
