@@ -9,7 +9,7 @@ const challenges: Challenge[] = [
   {
     name: 'URL Shortener Landing Page',
     slug: 'url-shortener',
-    intro: 'A landing page for a URL shortening product.',
+    intro: 'A landing page for a URL shortener product using the cleanuri.com API.',
     challenge_url: 'https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G',
     body: '',
   },
