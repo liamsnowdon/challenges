@@ -7,6 +7,13 @@ import type { Challenge } from '../types'
 
 const challenges: Challenge[] = [
   {
+    name: 'NFT Preview Card Component',
+    slug: 'nft-card-component',
+    intro: 'A simple preview card component for an NFT.',
+    challenge_url: 'https://www.frontendmentor.io/challenges/nft-preview-card-component-SbdUL_w0U',
+    body: '',
+  },
+  {
     name: 'URL Shortener Landing Page',
     slug: 'url-shortener',
     intro: 'A landing page for a URL shortener product using the cleanuri.com API.',
