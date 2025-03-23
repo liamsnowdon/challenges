@@ -22,7 +22,6 @@ export default defineEventHandler(async (event) => {
     return response
   } catch (e: any) {
     if (e.statusCode === 400) {
-      console.log(e.data)
       throw createError({
         statusCode: 400,
         message: 'URL is invalid. Please check and try and again.',

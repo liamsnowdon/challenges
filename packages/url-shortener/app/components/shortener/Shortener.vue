@@ -34,14 +34,14 @@ async function onSubmit () {
         url: model.value,
         shortenedUrl: response.result_url,
       })
+
+      model.value = ''
     }
   } catch (e: any) {
     if (e.data.message) {
       errorMessage.value = e.data.message
     }
   }
-
-  model.value = ''
 }
 
 function onInput () {
