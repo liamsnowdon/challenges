@@ -4,6 +4,7 @@ This is a collection of frontend coding challenges from Frontend Mentor, which h
 
 ## Challenges
 
+- [NFT Preview Card Component](./packages/nft-card-component)
 - [URL Shortener Landing Page](./packages/url-shortener)
 - [QR Code Component](./packages/qr-code-component)
 - [Frontend Quiz](./packages/frontend-quiz)
