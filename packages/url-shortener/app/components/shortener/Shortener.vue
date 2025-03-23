@@ -15,16 +15,31 @@ const errorMessage = ref('')
 
 const shortenedLinks = ref<ShortenedLink[]>([])
 
-function onSubmit () {
+async function onSubmit () {
   if (!model.value) {
     errorMessage.value = 'Please add a link'
     return
   }
 
-  shortenedLinks.value.unshift({
-    url: model.value,
-    shortenedUrl: 'https://cleanuri.com/MD7Omm',
-  })
+  try {
+    const response = await $fetch('/api/shorten', {
+      method: 'post',
+      body: {
+        url: model.value,
+      },
+    })
+
+    if ('result_url' in response) {
+      shortenedLinks.value.unshift({
+        url: model.value,
+        shortenedUrl: response.result_url,
+      })
+    }
+  } catch (e: any) {
+    if (e.data.message) {
+      errorMessage.value = e.data.message
+    }
+  }
 
   model.value = ''
 }
@@ -48,7 +63,7 @@ function onInput () {
         >
           <InputText
             v-model="model"
-            placeholder="Shorten a link here"
+            placeholder="Shorten a link here..."
             :error-message="errorMessage || undefined"
             @input="onInput"
           />
