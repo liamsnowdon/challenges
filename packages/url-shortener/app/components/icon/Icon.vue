@@ -5,5 +5,5 @@ defineProps<{
 </script>
 
 <template>
-  <img :src="`/images/icons/${name}.svg`" loading="lazy">
+  <img :src="`/images/icons/${name}.svg`" loading="lazy" alt="">
 </template>
