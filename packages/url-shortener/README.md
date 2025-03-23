@@ -27,15 +27,14 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Desktop screenshot](./challenge/screenshot-desktop.jpeg)
+![Mobile screenshot](./challenge/screenshot-mobile.jpeg)
 
 ### Links
 
 - Live Site URL: [URL Shortener](https://ls-challenges-url-shortener.netlify.app) 
 
-## My process
-
-### Built with
+## Built with
 
 - Nuxt.js/Vue.js
 - TypeScript
