@@ -5,6 +5,7 @@ import Hero from '~/components/hero/Hero.vue'
 import Shortener from '~/components/shortener/Shortener.vue'
 import Statistics from '~/components/statistics/Statistics.vue'
 import Footer from '~/components/footer/Footer.vue'
+import Boost from '~/components/boost/Boost.vue'
 </script>
 
 <template>
@@ -16,18 +17,9 @@ import Footer from '~/components/footer/Footer.vue'
       </Content>
     </div>
 
-    <section id="shortener" p="x-6">
-      <Content>
-        <Shortener />
-      </Content>
-    </section>
-
-    <section p="x-6">
-      <Content>
-        <Statistics />
-      </Content>
-    </section>
-
+    <Shortener />
+    <Statistics />
+    <Boost />
     <Footer />
   </div>
 </template>
