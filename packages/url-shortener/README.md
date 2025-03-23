@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [URL Shortener](https://ls-challenges-url-shortener.netlify.app)
+- Live Site URL: [URL Shortener](https://ls-challenges-url-shortener.netlify.app) 
 
 ## My process
 
