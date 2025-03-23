@@ -12,8 +12,7 @@ type ShortenedLink = {
 
 const model = ref('')
 const errorMessage = ref('')
-
-const shortenedLinks = ref<ShortenedLink[]>([])
+const shortenedLinks = ref<ShortenedLink[]>(JSON.parse(localStorage.getItem('url-shortener.links') || '[]'))
 
 async function onSubmit () {
   if (!model.value) {
@@ -37,6 +36,8 @@ async function onSubmit () {
 
       model.value = ''
     }
+
+    localStorage.setItem('url-shortener.links', JSON.stringify(shortenedLinks.value))
   } catch (e: any) {
     if (e.data.message) {
       errorMessage.value = e.data.message
