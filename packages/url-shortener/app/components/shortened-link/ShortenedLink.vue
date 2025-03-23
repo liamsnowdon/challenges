@@ -32,8 +32,16 @@ function copyToClipboard () {
     items="lg:center"
     divide="y lg:y-0 palette-4/25"
     rounded="5px"
+    space="lg:x-6"
   >
-    <span flex="lg:1" p="x-4 y-1.5 lg:x-0 lg:y-0" text="palette-1 lg:20px" font="leading-9 medium">{{ url }}</span>
+    <span
+      flex="lg:1"
+      p="x-4 y-1.5 lg:x-0 lg:y-0"
+      text="palette-1 lg:20px"
+      break="words"
+      font="leading-9 medium"
+      min-w="0"
+    >{{ url }}</span>
 
     <div flex="~ col lg:row" items="lg:center" p="x-4 y-1.5 b-4 lg:0" space="y-2 lg:y-0 lg:x-6">
       <a

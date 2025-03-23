@@ -4,14 +4,12 @@ import { computed } from 'vue'
 const {
   as = 'button',
   variant = 'primary',
-  disabled = false,
   size = 'base',
   pill = false,
 } = defineProps<{
   as?: 'button' | 'a'
   variant?: 'primary' | 'secondary'
   size?: 'small' | 'base' | 'large'
-  disabled?: boolean
   pill?: boolean
   href?: string
 }>()
@@ -24,7 +22,7 @@ const variantClasses = computed(() => {
   return {
     primary: [
       'text-white',
-      'bg-palette-6 hover:bg-palette-6/50',
+      'bg-palette-6 hover:bg-[#9AE3E3]',
       'focus:ring-palette-6',
     ],
     secondary: [
