@@ -20,6 +20,8 @@ export default defineConfig({
         5: '#EFF1F7',
         6: '#2BD0D0',
         7: '#F46363',
+        8: '#BFBFBF',
+        9: '#232127',
       },
     },
   },

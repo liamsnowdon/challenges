@@ -37,9 +37,9 @@ const variantClasses = computed(() => {
 
 const sizeClasses = computed(() => {
   return {
-    'h-10 px-5 rounded-5px text-base md:text-15px': size === 'small',
+    'h-10 px-5 rounded-5px text-base lg:text-15px': size === 'small',
     'h-14 px-10 rounded-5px text-20px': size === 'base',
-    'h-12 md:h-16 px-10 rounded-10px text-18px md:text-20px': size === 'large',
+    'h-12 lg:h-16 px-10 rounded-10px text-18px lg:text-20px': size === 'large',
   }
 })
 
