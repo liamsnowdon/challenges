@@ -3,7 +3,13 @@ import Button from '../button/Button.vue'
 </script>
 
 <template>
-  <header grid="~ cols-1 lg:cols-2 gap-9 lg:gap-0" items="center" p="t-6 lg:t-19.5 b-9 lg:b-17" text="center lg:left">
+  <header
+    flex="~ col lg:row"
+    space="y-9 lg:y-0"
+    items="center"
+    p="t-6 lg:t-19.5 b-9 lg:b-17"
+    text="center lg:left"
+  >
     <img
       src="/images/illustration-working.svg"
       alt="Illustration"
@@ -13,8 +19,8 @@ import Button from '../button/Button.vue'
       h="84.25 lg:120.5"
     >
 
-    <div order="lg:1">
-      <h1 text="42px lg:80px palette-1" font="bold" leading="12 lg:22.5" m="b-3.75 lg:b-1.25">
+    <div order="lg:1" flex="lg:none" w="lg:141">
+      <h1 text="42px lg:80px palette-1" font="bold tracking--2px" leading="12 lg:22.5" m="b-3.75 lg:b-1.25">
         More than just shorter links
       </h1>
 

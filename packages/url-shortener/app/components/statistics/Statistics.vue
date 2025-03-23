@@ -7,7 +7,7 @@ import Statistic from '../statistic/Statistic.vue'
   <section p="x-6" m="b-20 lg:b-30">
     <Content>
       <div max-w="135" m="x-auto b-12 lg:b-14" text="center">
-        <h2 text="28px lg:40px palette-2" font="bold" m="b-4 lg:b-4.5">
+        <h2 text="28px lg:40px palette-2" font="bold tracking--1px" m="b-4 lg:b-4.5">
           Advanced Statistics
         </h2>
         <p text="lg:18px palette-4" font="medium">
