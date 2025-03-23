@@ -57,9 +57,10 @@ function onInput () {
         <form
           flex="~ col lg:row"
           space="y-4 lg:y-0 lg:x-6"
-          bg="palette-2"
           p="6 lg:x-16 lg:y-13"
           rounded="10px"
+          bg="palette-2 no-repeat cover"
+          class="bg-[url(/images/backgrounds/shorten-mobile.svg)] lg:bg-[url(/images/backgrounds/shorten-desktop.svg)]"
           @submit.prevent="onSubmit"
         >
           <InputText
