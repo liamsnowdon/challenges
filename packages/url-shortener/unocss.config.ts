@@ -38,6 +38,7 @@ export default defineConfig({
 
       body {
         background-color: ${theme.colors.palette[5]};
+        font-family: "Poppins", sans-serif;
       }
     `,
   }],
