@@ -7,6 +7,13 @@ import type { Challenge } from '../types'
 
 const challenges: Challenge[] = [
   {
+    name: 'URL Shortener Landing Page',
+    slug: 'url-shortener',
+    intro: 'A landing page for a URL shortening product.',
+    challenge_url: 'https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G',
+    body: '',
+  },
+  {
     name: 'QR Code Component',
     slug: 'qr-code-component',
     intro: 'A simple QR code component in a card.',
