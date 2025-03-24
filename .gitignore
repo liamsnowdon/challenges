@@ -27,3 +27,4 @@ logs
 !packages/social-links/dist
 !packages/qr-code-component/dist
 !packages/nft-card-component/dist
+!packages/rating-component/dist
