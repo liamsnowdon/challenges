@@ -1,0 +1,286 @@
+:root {
+  --white: #FFFFFF;
+  --black: #000000;
+  --grey-950: #131518;
+  --grey-900: #262E38;
+  --grey-500: #969FAD;
+  --orange-500: #FC7614;
+  --gradient: #232A34, #181E27;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--grey-950);
+  font-family: Overpass, sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.text-preset-1 {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 35px;
+}
+
+.text-preset-2 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.text-preset-3 {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+}
+
+.text-preset-4-bold {
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 19px;
+  letter-spacing: 2px;
+}
+
+.text-preset-4 {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.text-preset-5-bold {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+  letter-spacing: 1.87px;
+}
+
+.text-preset-5-semibold {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.17px;
+}
+
+.text-preset-5 {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+}
+
+.rating {
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background: radial-gradient(#232A34, #181E27);
+  width: 100%;
+}
+
+.rating__initial {
+  padding: 28.5px 24px;
+}
+
+.rating__finished {
+  padding: 36px 24px;
+}
+
+.rating__star {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: var(--grey-900);
+  margin-bottom: 24px;
+
+  img {
+    width: 14px;
+  }
+}
+
+.rating__heading {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 30px;
+  color: var(--white);
+  margin: 0 0 16px;
+}
+
+.rating__text {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--grey-500);
+  margin: 0 0 16px;
+}
+
+.rating__numbers {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.rating__number {
+  cursor: pointer;
+  appearance: none;
+  padding: 0;
+  border: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: var(--grey-900);
+  color: var(--grey-500);
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+  letter-spacing: 1.87px;
+}
+
+.rating__number:hover:not(.rating__number--active) {
+  background-color: var(--white);
+  color: var(--grey-900);
+}
+
+.rating__number--active {
+  background-color: var(--orange-500);
+  color: var(--grey-900);
+}
+
+.rating__submit {
+  cursor: pointer;
+  appearance: none;
+  padding: 0;
+  border: 0;
+  height: 45px;
+  width: 100%;
+  border-radius: 22.5px;
+  background-color: var(--orange-500);
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+  letter-spacing: 1.87px;
+}
+
+.rating__submit:hover {
+  background-color: var(--white);
+  color: var(--grey-950);
+}
+
+.rating__finished {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.rating__illustration {
+  margin-bottom: 24px;
+
+  img {
+    width: 144px;
+  }
+}
+
+.rating__pill {
+  display: flex;
+  align-items: center;
+  background-color: var(--grey-900);
+  border-radius: 22.5px;
+  height: 32px;
+  padding: 2px 16px 0;
+  color: var(--orange-500);
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 480px) {
+  .rating {
+    border-radius: 30px;
+    width: 412px;
+  }
+
+  .rating__initial {
+    padding: 34.5px 30.5px;
+  }
+
+  .rating__finished {
+    padding: 44.5px 36px;
+  }
+
+  .rating__star {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 32px;
+
+    img {
+      width: 17px;
+    }
+  }
+
+  .rating__heading {
+    font-size: 28px;
+    line-height: 35px;
+  }
+
+  .rating__text {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .rating__numbers {
+    margin-bottom: 32px;
+  }
+
+  .rating__number {
+    width: 51px;
+    height: 51px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+  }
+
+  .rating__submit {
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.17px;
+  }
+
+  .rating__illustration {
+    margin-bottom: 32px;
+
+    img {
+      width: 162px;
+    }
+  }
+
+  .rating__pill {
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 32px;
+  }
+}
+
+.m-0 {
+  margin: 0;
+}

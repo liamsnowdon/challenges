@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="container">
+    <div class="rating js-rating">
+       <div class="rating__initial js-rating-initial-state">
+          <div class="rating__star">
+            <img src="./assets/images/icon-star.svg" alt="" />
+          </div>
+
+          <h1 class="rating__heading">How did we do?</h1>
+
+          <p class="rating__text">
+            Please let us know how we did with your support request. All feedback is appreciated 
+            to help us improve our offering!
+          </p>
+
+          <div class="rating__numbers">
+            <button type="button" class="rating__number js-rating-number">1</button>
+            <button type="button" class="rating__number js-rating-number">2</button>
+            <button type="button" class="rating__number js-rating-number">3</button>
+            <button type="button" class="rating__number js-rating-number">4</button>
+            <button type="button" class="rating__number js-rating-number">5</button>
+          </div>
+
+          <button type="button" class="rating__submit js-rating-submit">Submit</button>
+       </div>
+
+       <div class="rating__finished js-rating-finished-state" style="display: none;">
+          <div class="rating__illustration">
+            <img src="./assets/images/illustration-thank-you.svg" alt="" />
+          </div>
+
+          <div class="rating__pill js-rating-rating"></div>
+
+          <h1 class="rating__heading">Thank you!</h1>
+
+          <p class="rating__text m-0">
+            We appreciate you taking the time to give a rating. If you ever need more support, 
+            don't hesitate to get in touch!
+          </p>
+       </div>
+    </div>
+  </main>
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
