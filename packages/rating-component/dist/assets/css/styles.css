@@ -28,56 +28,6 @@ img {
   max-width: 100%;
 }
 
-.text-preset-1 {
-  font-size: 28px;
-  font-weight: bold;
-  line-height: 35px;
-}
-
-.text-preset-2 {
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 30px;
-}
-
-.text-preset-3 {
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 24px;
-  letter-spacing: 0.2px;
-}
-
-.text-preset-4-bold {
-  font-size: 15px;
-  font-weight: bold;
-  line-height: 19px;
-  letter-spacing: 2px;
-}
-
-.text-preset-4 {
-  font-size: 15px;
-  line-height: 24px;
-}
-
-.text-preset-5-bold {
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 18px;
-  letter-spacing: 1.87px;
-}
-
-.text-preset-5-semibold {
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 24px;
-  letter-spacing: 0.17px;
-}
-
-.text-preset-5 {
-  font-size: 14px;
-  line-height: 22px;
-}
-
 .container {
   height: 100%;
   display: flex;
