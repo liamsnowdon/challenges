@@ -14,6 +14,10 @@ useSeoMeta({
 })
 
 const extensions = ref<ExtensionEntity[]>(extensionsJSON)
+
+function onRemoveExtension (index: number) {
+  extensions.value.splice(index, 1)
+}
 </script>
 
 <template>
@@ -26,7 +30,12 @@ const extensions = ref<ExtensionEntity[]>(extensionsJSON)
 
         <main>
           <div grid="~ cols-1 md:cols-2 lg:cols-3 gap-3">
-            <Extension v-for="extension in extensions" :key="extension.name" :extension="extension" />
+            <Extension
+              v-for="(extension, index) in extensions"
+              :key="extension.name"
+              :extension="extension"
+              @remove="onRemoveExtension(index)"
+            />
           </div>
         </main>
       </WrapperContent>

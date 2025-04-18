@@ -16,8 +16,14 @@ function remove () {
 </script>
 
 <template>
-  <div p="5" bg="neutral-0 dark:neutral-800" space="y-6" border="~ neutral-200 dark:neutral-600 rounded-5">
-    <div flex="~ items-start" space="x-4">
+  <div
+    flex="~ col"
+    p="5"
+    bg="neutral-0 dark:neutral-800"
+    space="y-6"
+    border="~ neutral-200 dark:neutral-600 rounded-5"
+  >
+    <div flex="1 ~ items-start" space="x-4">
       <img :src="extension.logo" :alt="`${extension} logo`">
 
       <div flex="~ col" space="y-2">
