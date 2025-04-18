@@ -32,7 +32,7 @@ export default defineConfig({
         'light-to': '#EEF8F9',
         'dark-from': '#040918',
         'dark-to': '#091540',
-      }
+      },
     },
   },
 
