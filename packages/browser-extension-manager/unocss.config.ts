@@ -35,25 +35,4 @@ export default defineConfig({
       },
     },
   },
-
-  preflights: [{
-    getCSS: ({ theme }: { theme: any }) => `
-      html, body {
-        height: 100%;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        background-color: white;
-        font-family: "Noto Sans", sans-serif;
-      }
-
-      html.dark body {
-        background-color: white;
-      }
-    `,
-  }],
 })

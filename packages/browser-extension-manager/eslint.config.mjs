@@ -37,6 +37,7 @@ export default withNuxt(
           'NuxtLink',
         ],
       }],
+      'vue/no-mutating-props': 'off',
     },
   },
 )
